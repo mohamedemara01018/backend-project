@@ -16,6 +16,10 @@ mongoose.connect('mongodb://127.0.0.1:27017/courses')
     .then((resolve) => { console.log('mongoDB server started') })
     .catch((reject) => { console.log("failed to connect to server") });
 
+app.get('/', (req,res) => {
+    res.send("hi, i'm mohamed how are you")
+})
+
 
 app.use('/courses', coursesRouter)
 app.use('/users', usersRouter)
